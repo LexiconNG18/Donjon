@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cell.cs" />
+    <Compile Include="Creature.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="Hero.cs" />
     <Compile Include="Map.cs" />

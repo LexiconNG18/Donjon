@@ -1,14 +1,14 @@
 ﻿namespace Donjon
 {
-    internal class Position
+    internal struct Position
     {
-        private int x;
-        private int y;
+        public int X;
+        public int Y;
 
         public Position(int x, int y)
         {
-            this.x = x;
-            this.y = y;
+            X = x;
+            Y = y;
         }
     }
 }

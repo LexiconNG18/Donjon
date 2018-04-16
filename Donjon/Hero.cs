@@ -1,8 +1,11 @@
 ﻿namespace Donjon
 {
-    internal class Hero
+    internal class Hero : Creature
     {
-        public Hero()
+        public Hero() : base(
+            name: "Hero",
+            symbol: "H",
+            color: System.ConsoleColor.White)
         {
         }
     }

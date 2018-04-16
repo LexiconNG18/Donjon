@@ -37,12 +37,22 @@ namespace Donjon
 
         private void MoveHero()
         {
+
             throw new NotImplementedException();
         }
 
         private void Draw()
         {
-            throw new NotImplementedException();
+            Console.Clear();
+            for (int y = 0; y < map.Height; y++)
+            {
+                for (int x = 0; x < map.Width; x++)
+                {
+                    var cell = map.Cell(x, y);
+                    Console.Write(" " + cell.Symbol);
+                }
+                Console.WriteLine();
+            }
         }
 
         private void Init()
