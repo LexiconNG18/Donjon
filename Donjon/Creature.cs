@@ -7,6 +7,7 @@ namespace Donjon
         public string Name { get; set; }
         public ConsoleColor Color { get; set; }
         public string Symbol { get; set; }
+        public Position Position { get; set; }
 
         protected Creature(string name, string symbol, ConsoleColor color)
         {

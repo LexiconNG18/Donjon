@@ -17,7 +17,7 @@
             }
         }
 
-        public Creature Creature { get; private set; }
+        public Creature Creature { get; set; }
 
         public Cell(Position position)
         {
