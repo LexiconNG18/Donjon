@@ -1,4 +1,4 @@
-﻿namespace Donjon
+﻿namespace Donjon.Entities
 {
     internal class Hero : Creature
     {
@@ -7,6 +7,7 @@
             symbol: "H",
             color: System.ConsoleColor.White)
         {
+            Damage = 10;
         }
     }
 }

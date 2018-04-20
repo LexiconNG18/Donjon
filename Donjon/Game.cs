@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Donjon.Entities;
+using System;
 
 namespace Donjon
 {
@@ -30,6 +31,10 @@ namespace Donjon
                 }
                 Draw();
                 // Game actions
+                foreach (var monster in map.Monsters)
+                {
+                    monster.Action(map);
+                }
 
             } while (gameInProgress);
             Draw();
@@ -52,17 +57,21 @@ namespace Donjon
 
         private void Draw()
         {
-            Console.Clear();
+            //Console.Clear();
+            Console.SetCursorPosition(0, 0);
+            Console.CursorVisible = false;
             for (int y = 0; y < map.Height; y++)
             {
                 for (int x = 0; x < map.Width; x++)
                 {
                     var cell = map.Cell(x, y);
-                    Console.ForegroundColor = ConsoleColor.Cyan;
+                    Console.ForegroundColor = cell.Color;
                     Console.Write(" " + cell.Symbol);
                 }
                 Console.WriteLine();
             }
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine($"HP: {hero.Health}/{hero.MaxHealth}  Dmg: {hero.Damage}    ");
         }
 
         private void Init()
@@ -70,6 +79,9 @@ namespace Donjon
             map = new Map(10, 10);
             hero = new Hero();
             map.Place(hero, map.Cell(hero.Position));
+            map.Place(new Goblin(), map.Cell(5, 7));
+            map.Place(new Goblin(), map.Cell(7, 5));
+            map.Place(new Goblin(), map.Cell(3, 3));
         }
     }
 }

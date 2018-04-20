@@ -1,21 +1,14 @@
-﻿namespace Donjon
+﻿using Donjon.Entities;
+using System;
+
+namespace Donjon
 {
     internal class Cell
     {
         public Position Position { get; }
-        public string Symbol
-        {
-            get {
-                if (Creature != null)
-                {
-                    return Creature.Symbol;
-                }
-                else
-                {
-                    return ".";
-                }
-            }
-        }
+
+        public string Symbol => Creature?.Symbol ?? ".";
+        public ConsoleColor Color => Creature?.Color ?? ConsoleColor.DarkGray;
 
         public Creature Creature { get; set; }
 
