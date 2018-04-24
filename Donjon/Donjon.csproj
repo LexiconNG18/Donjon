@@ -46,6 +46,7 @@
     <Compile Include="Entities\Creature.cs" />
     <Compile Include="Direction.cs" />
     <Compile Include="Entities\Goblin.cs" />
+    <Compile Include="Utilities\Log.cs" />
     <Compile Include="Entities\Monster.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="Entities\Hero.cs" />

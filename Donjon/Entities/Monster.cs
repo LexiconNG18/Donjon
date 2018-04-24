@@ -24,6 +24,7 @@ namespace Donjon.Entities
 
         internal bool Action(Map map)
         {
+
             if (IsDead) return false;
             if (!IsAggressive) return false;
             var hero = map.Creatures.FirstOrDefault(c => c is Hero) as Hero;
@@ -32,5 +33,12 @@ namespace Donjon.Entities
             if (Math.Abs(dx) > 1 || Math.Abs(dy) > 1) return false;
             return Attack(hero);            
         }
+
+        protected override void Defend(int damage)
+        {
+            base.Defend(damage);
+            IsAggressive = true;
+        }
+
     }
 }
