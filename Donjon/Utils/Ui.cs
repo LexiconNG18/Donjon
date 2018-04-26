@@ -143,7 +143,7 @@ namespace Donjon.Utils
                     var appearance = cell.Appearance;
                     Console.ForegroundColor = appearance.Color;
                     Console.BackgroundColor = cell.Environment.Background; 
-                    Console.Write(" " + appearance.Symbol + " ");
+                    Console.Write(" " + appearance.Symbol);
                 }
 
                 Console.WriteLine();
