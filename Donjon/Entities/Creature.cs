@@ -3,11 +3,12 @@ using System;
 
 namespace Donjon.Entities
 {
-    internal abstract class Creature
+    internal abstract class Creature : IDrawable
     {
         public string Name { get; set; }
-        public virtual ConsoleColor Color { get; set; }
         public string Symbol { get; set; }
+        public virtual ConsoleColor Color { get; set; }
+
         public Position Position { get; set; }
         public int Health { get; set; } = 15;
         public int MaxHealth { get; set; } = 15;

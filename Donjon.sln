@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27428.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Donjon", "Donjon\Donjon.csproj", "{5FF65EE6-D9C7-426E-A3AC-2D2214157F7F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DonjonTests", "DonjonTests\DonjonTests.csproj", "{6967C0E1-CDB1-4AE5-8B8B-F5EAFE166318}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{5FF65EE6-D9C7-426E-A3AC-2D2214157F7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5FF65EE6-D9C7-426E-A3AC-2D2214157F7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5FF65EE6-D9C7-426E-A3AC-2D2214157F7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6967C0E1-CDB1-4AE5-8B8B-F5EAFE166318}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6967C0E1-CDB1-4AE5-8B8B-F5EAFE166318}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6967C0E1-CDB1-4AE5-8B8B-F5EAFE166318}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6967C0E1-CDB1-4AE5-8B8B-F5EAFE166318}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

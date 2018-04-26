@@ -1,5 +1,6 @@
 ﻿using Donjon.Entities;
 using Donjon.Utilities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -71,6 +72,11 @@ namespace Donjon
             destination.Creature = creature;
             return true;
         }
+        public bool Place(Item item, Cell cell)
+        {
+            cell.Items.Add(item);
+            return true;            
+        }
 
         public bool Move(Cell from, Cell destination)
         {
@@ -84,5 +90,7 @@ namespace Donjon
             destination.Creature = creature;
             return true;
         }
+
+        
     }
 }
