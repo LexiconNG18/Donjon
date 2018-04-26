@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Donjon
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main()
         {
             bool playAgain;
             do
@@ -19,6 +15,8 @@ namespace Donjon
                 var key = Console.ReadKey(intercept: true).Key;
                 playAgain = key == ConsoleKey.Y;
             } while (playAgain);
+
+            Console.Clear();
         }
     }
 }

@@ -42,17 +42,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cell.cs" />
-    <Compile Include="Entities\Creature.cs" />
     <Compile Include="Direction.cs" />
-    <Compile Include="Entities\Goblin.cs" />
-    <Compile Include="Entities\Monster.cs" />
+    <Compile Include="Entities\Cell.cs" />
+    <Compile Include="Entities\Creatures\Creature.cs" />
+    <Compile Include="Entities\Creatures\Goblin.cs" />
+    <Compile Include="Entities\Creatures\Hero.cs" />
+    <Compile Include="Entities\Creatures\Monster.cs" />
+    <Compile Include="Entities\Creatures\Troll.cs" />
+    <Compile Include="Entities\Environment.cs" />
+    <Compile Include="Entities\IDrawable.cs" />
+    <Compile Include="Entities\Items\HealthPotion.cs" />
+    <Compile Include="Entities\Items\IConsumable.cs" />
+    <Compile Include="Entities\Items\Item.cs" />
+    <Compile Include="Entities\Items\Potion.cs" />
+    <Compile Include="Entities\Items\TelePotion.cs" />
+    <Compile Include="Entities\Items\Weapon.cs" />
     <Compile Include="Game.cs" />
-    <Compile Include="Entities\Hero.cs" />
+    <Compile Include="Level.cs" />
     <Compile Include="Map.cs" />
     <Compile Include="Position.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\LimitedList.cs" />
+    <Compile Include="Utils\Log.cs" />
+    <Compile Include="Utils\StringExtensions.cs" />
+    <Compile Include="Utils\Ui.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
