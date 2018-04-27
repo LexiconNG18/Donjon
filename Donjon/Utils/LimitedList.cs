@@ -1,55 +1,30 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 
-namespace Donjon.Utils
-{
-    public class LimitedList<T> : IEnumerable<T>
-    {
+namespace Donjon.Utils {
+    public class LimitedList<T> : IEnumerable<T> {
         private readonly List<T> list = new List<T>();
 
-        public LimitedList(int capacity)
-        {
-            Capacity = capacity < 0 ? 0 : capacity;
-        }
+        public LimitedList(int capacity) => Capacity = capacity < 0 ? 0 : capacity;
 
-        public int Capacity { get; }
-        public int Count => list.Count;
+        public int  Capacity { get; }
+        public int  Count    => list.Count;
+        public bool IsFull   => list.Count >= Capacity;
 
-        public IEnumerator<T> GetEnumerator()
-        {
+        public IEnumerator<T> GetEnumerator() {
             foreach (var item in list) yield return item;
         }
 
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            return GetEnumerator();
-        }
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 
-        public bool Add(T item)
-        {
-            if (list.Count >= Capacity) return false;
+        public bool Add(T item) {
+            if (IsFull) return false;
             list.Add(item);
             return true;
         }
 
-        public bool Remove(T item)
-        {
-            return list.Remove(item);
-        }
-
-        public bool Contains(T item)
-        {
-            return list.Contains(item);
-        }
-
-        public bool IsFull()
-        {
-            return list.Count >= Capacity;
-        }
-
-        public void RemoveAt(int index)
-        {
-            list.RemoveAt(index);
-        }
+        public bool Remove(T item)      => list.Remove(item);
+        public void RemoveAt(int index) => list.RemoveAt(index);
+        public bool Contains(T item)    => list.Contains(item);
     }
 }

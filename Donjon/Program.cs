@@ -1,14 +1,10 @@
 ﻿using System;
 
-namespace Donjon
-{
-    internal class Program
-    {
-        private static void Main()
-        {
+namespace Donjon {
+    class Program {
+        private static void Main() {
             bool playAgain;
-            do
-            {
+            do {
                 var game = new Game();
                 game.Run();
                 Console.WriteLine("Another game?");

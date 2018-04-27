@@ -2,10 +2,8 @@
 using Donjon.Entities.Creatures;
 using Donjon.Utils;
 
-namespace Donjon.Entities.Items
-{
-    internal interface IConsumable : IDrawable
-    {
+namespace Donjon.Entities.Items {
+    interface IConsumable : IDrawable {
         Action<Log> Affect(Hero hero);
     }
 }

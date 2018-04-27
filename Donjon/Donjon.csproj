@@ -48,6 +48,7 @@
     <Compile Include="Entities\Creatures\Goblin.cs" />
     <Compile Include="Entities\Creatures\Hero.cs" />
     <Compile Include="Entities\Creatures\Monster.cs" />
+    <Compile Include="Entities\Creatures\Orc.cs" />
     <Compile Include="Entities\Creatures\Troll.cs" />
     <Compile Include="Entities\Environment.cs" />
     <Compile Include="Entities\IDrawable.cs" />
